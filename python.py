@@ -1,8 +1,12 @@
-TICKET_PRICE = 10 #this is a constant
 
+#these are constants
+SERVICE_CHARGE = 2 #create a new constant for the 2 dollar service charge
+TICKET_PRICE = 10
 tickets_remaining = 100
 
-
+#create calculate_price function
+def calculate_price(number_of_tickets):
+    return (number_of_tickets * TICKET_PRICE) + SERVICE_CHARGE
 
 #run this code continuously until we run out of tickets_remaining
 while tickets_remaining >= 1:
@@ -25,8 +29,8 @@ while tickets_remaining >= 1:
     except ValueError as err:
         print("Uh Oh we ran into an issue. {}. Please try again".format(err))
     else:
-        #calculate the price (number of tickets multiplied by the price) and assign it to a variable
-        amount_due = num_tickets * TICKET_PRICE
+        #calculate the amount due
+        amount_due = calculate_price(num_tickets)
 
         #output the total to the screen
         print("That will cost you {}".format(amount_due))
