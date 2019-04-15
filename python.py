@@ -16,5 +16,16 @@ num_tickets = int(num_tickets) #reassign variable to number of tickets
 #calculate the price (number of tickets multiplied by the price) and assign it to a variable
 amount_due = num_tickets * TICKET_PRICE
 
-#output the total
+#output the total to the screen
 print("That will cost you {}".format(amount_due))
+
+#as a user i should be able to confirm my order Y/N?
+should_proceed = input("Would you like to purchase now? Type Y or N to proceed  ")
+if should_proceed.lower() == "y":
+        print("SOLD!")
+        #todo : gather credit card info and process it here.
+        tickets_remaining -= num_tickets #updating tickets remaining
+
+else: print("Thank you anyways, {} have a good day!".format(name))
+
+            #decrement tickets_remaining
