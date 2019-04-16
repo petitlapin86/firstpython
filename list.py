@@ -6,6 +6,8 @@
 #.extend adds a list on to a list
 #.append adds a list item
 #del remove a list item - its really just deleting the label not the object
+#.insert(index, value) Adds a value to a list at a particular index.
+#You can, of course, also add lists together with the + operator. To do this in place, you'd use the increment operator +=.
 #.pop removes the last item of the list
 #.copy makes a copy of the list
 #.slice
