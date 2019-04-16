@@ -15,16 +15,27 @@ def show_help():
     """)
 
 def add_to_list(item): #function that appends items to shopping list
-    shopping_list.append(item)
+    show_list()
+    if len(shopping_list):
+        position = input("where should I add {}?\n")
+                         "Press ENTER to add to the end of the list\n")
+    shopping_list.append(new_item)
     #notify user that item was added state total number of items in lists
     print("Added! Your list has {} items total.".format(len(shopping_list)))
-    show_list()
+
 
 def show_list():
     clear_screen()
+
     print("Heres your list:")
+
+    index = 1 #starting list at index one instead of zero
+
     for item in shopping_list:
-        print(item)
+        print("{}".format(index, item))
+        index += 1 #incrementing index by one for each new item
+
+        print("-"*10) #aesthetically pleasing divider
 
 
 show_help() #begin program by printing show help to screen
