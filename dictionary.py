@@ -28,3 +28,20 @@ def unpacker(first_name=None, last_name=None):
         print("Hi, no name!")
 
 unpacker(**{"last_name": "Jones", "first_name": "Paige"})
+
+
+#iterating through a dictionary
+#you can iterate through with a for loop
+#example:
+types_of_drinks = {"coffee": "black", "juice": "orange", "tea": "herbal"}
+
+
+for key in types_of_drinks.keys():
+    print(key)
+
+for value in types_of_drinks.values():
+    print(value)
+
+#this is a tuple
+for item in types_of_drinks.items():
+    print(item)
