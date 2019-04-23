@@ -3,6 +3,7 @@
 #dictionaries are similar to lists however they arent sorted
 #each dictionary has a key and a value
 
+
 course = {"title": "learn python"}
 
 #title is the key
@@ -25,3 +26,5 @@ def unpacker(first_name=None, last_name=None):
         print("hi {} {}!".format(first_name, last_name))
     else:
         print("Hi, no name!")
+
+unpacker(**{"last_name": "Jones", "first_name": "Paige"})
