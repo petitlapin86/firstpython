@@ -5,6 +5,7 @@
 #tuples are imutable (cant be changed in place)
 #tuples are often shown with parenthesis
 #but technically its the commas that make up a tuple
+#tuples have packing and unpacking too
 
 my_tuple = (1, 2, 3)
 my_second_tuple = 1, 2, 3
