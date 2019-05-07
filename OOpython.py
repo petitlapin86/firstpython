@@ -43,3 +43,30 @@ class NumString:
     def __imul__(self, other): #in the in-place method iadd, the value of self.value is updated before the return. The object value changes and is not just used to return a value
         self.value = self * other
         return self.value
+
+
+#Emulating Built In Classes --------------------------------------------
+
+#NEW AND INIT MAGIC METHODS --------------------------------------------
+#here are some examples:
+
+class ReversedStr(str):
+    def __new__(*args, **kwargs): #new ---- if its imutable use new
+        self = str.__new__(*args, **kwargs)
+        self = self[::-1] #reversing the string here
+        return self #return reversed string
+
+# I NEED TO RESEARCH __init__  and **kwargs --> this is confusing to me 
+class FilledList(list):
+    def __init__(self, count, value, *args, **kwargs): # ----if its mutable use init, used when we want to customize how a new instance of a class is created
+        super().__init__()
+        for _ in range(count): #the underscore here means ignore the value
+            self.append(copy.copy(value))
+
+
+
+
+#YIELD KEYWORD
+# very similar to return keyword
+# lets us send values back out of the function or method as its available
+# and keep on working
